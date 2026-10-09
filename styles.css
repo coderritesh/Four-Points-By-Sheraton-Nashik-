@@ -1,0 +1,121 @@
+/* Four Points by Sheraton Nashik — IRD website
+   Font requirement: Times New Roman throughout. */
+:root {
+  --navy: #173f50;
+  --navy-deep: #102f3c;
+  --blue: #3d7180;
+  --pale: #eef4f4;
+  --paper: #fbfaf7;
+  --ink: #202b2e;
+  --muted: #667579;
+  --line: #dce5e5;
+  --white: #ffffff;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 1.55;
+}
+a { color: inherit; }
+.hero {
+  position: relative;
+  overflow: hidden;
+  color: var(--white);
+  background: linear-gradient(125deg, var(--navy-deep), var(--navy) 62%, #477d88);
+  min-height: 400px;
+  padding: 24px max(22px, calc((100% - 1080px) / 2)) 56px;
+}
+.topline { display: flex; align-items: center; gap: 12px; font-size: 13px; letter-spacing: 2px; font-weight: bold; }
+.brand-mark, .footer-mark {
+  display: inline-grid; place-items: center; width: 39px; height: 39px;
+  border: 1px solid rgba(255,255,255,.7); border-radius: 50%;
+  font-size: 14px; letter-spacing: 0; font-weight: bold;
+}
+.hero-content { position: relative; z-index: 1; max-width: 690px; padding-top: 57px; }
+.eyebrow { margin: 0 0 9px; color: var(--blue); font-size: 12px; font-weight: bold; letter-spacing: 2px; }
+.hero .eyebrow { color: #d1e5e8; }
+h1, h2, p { margin-top: 0; }
+h1 { margin-bottom: 13px; font-size: clamp(42px, 7vw, 68px); line-height: 1.04; font-weight: normal; letter-spacing: -.8px; }
+h2 { margin-bottom: 12px; font-size: clamp(29px, 4vw, 39px); line-height: 1.13; font-weight: normal; }
+.intro { max-width: 530px; margin-bottom: 27px; color: #e5eef0; font-size: 20px; }
+.hero-decoration {
+  position: absolute; width: 300px; height: 300px; right: -75px; bottom: -155px;
+  border: 1px solid rgba(255,255,255,.18); border-radius: 50%;
+}
+.hero-decoration:before, .hero-decoration:after {
+  content: ""; position: absolute; border: 1px solid rgba(255,255,255,.13); border-radius: 50%;
+}
+.hero-decoration:before { inset: 24px; }
+.hero-decoration:after { inset: 50px; }
+.section-wrap { width: min(100% - 40px, 900px); margin-inline: auto; }
+.welcome { padding-top: 53px; padding-bottom: 35px; max-width: 790px; }
+.welcome > p:last-child, .menu-description, .assistance-copy { color: var(--muted); }
+.button {
+  display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+  min-height: 48px; padding: 11px 19px; border-radius: 4px;
+  text-decoration: none; font-size: 17px; transition: transform .15s ease, background .15s ease;
+}
+.button:hover { transform: translateY(-1px); }
+.button-light { background: var(--white); color: var(--navy-deep); }
+.button-primary { color: white; background: var(--navy); border: 1px solid var(--navy); }
+.button-primary:hover { background: var(--navy-deep); }
+.button-outline { border: 1px solid #9eafb2; color: var(--navy); background: transparent; }
+.menu-card {
+  padding: clamp(22px, 4vw, 38px); background: white; border: 1px solid var(--line);
+  border-radius: 9px; box-shadow: 0 10px 35px rgba(23,63,80,.055);
+}
+.section-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.section-heading h2 { margin-bottom: 0; }
+.menu-tag { border: 1px solid var(--line); color: var(--blue); padding: 6px 10px; font-size: 11px; letter-spacing: 1.6px; white-space: nowrap; }
+.menu-description { margin: 16px 0 20px; }
+.menu-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 22px; }
+.pdf-frame { height: 650px; border: 1px solid var(--line); background: #f2f5f5; }
+.pdf-frame iframe { width: 100%; height: 100%; border: 0; }
+.pdf-note { margin: 10px 0 0; font-size: 14px; color: var(--muted); }
+.assistance { padding-top: 65px; padding-bottom: 68px; text-align: center; max-width: 700px; }
+.assistance-copy { max-width: 500px; margin: 0 auto 25px; }
+.contact-card {
+  display: flex; align-items: center; gap: 15px; text-align: left; padding: 17px;
+  border: 1px solid var(--line); background: white; border-radius: 7px; margin: 0 auto 13px;
+}
+.contact-icon { display: grid; place-items: center; flex: 0 0 45px; width: 45px; height: 45px; border-radius: 50%; background: var(--pale); color: var(--navy); font-size: 25px; }
+.contact-info { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.contact-label { font-size: 11px; letter-spacing: 1.4px; color: var(--muted); font-weight: bold; }
+.phone-number { font-size: 23px; text-decoration: none; font-weight: bold; color: var(--navy-deep); overflow-wrap: anywhere; }
+.contact-hint { font-size: 13px; color: var(--muted); }
+.round-link { display: grid; place-items: center; flex: 0 0 34px; width: 34px; height: 34px; border: 1px solid var(--line); border-radius: 50%; text-decoration: none; }
+.whatsapp-button { width: 100%; color: white; background: #237a53; font-size: 18px; }
+.whatsapp-button:hover { background: #1b6745; }
+.whatsapp-symbol { font-family: Arial, sans-serif; font-size: 22px; }
+.number-note { margin: 8px 0 0; font-size: 14px; color: var(--muted); }
+footer { padding: 30px 20px 25px; text-align: center; color: #e9f0f1; background: var(--navy-deep); }
+.footer-mark { margin-bottom: 10px; }
+.footer-hotel { margin-bottom: 0; font-size: 12px; font-weight: bold; letter-spacing: 2px; }
+.footer-sub { margin: 2px 0 18px; color: #c5d7da; font-size: 12px; letter-spacing: 2px; }
+.copyright { margin: 0; color: #b4c7ca; font-size: 12px; }
+@media (max-width: 600px) {
+  body { font-size: 17px; }
+  .hero { min-height: 365px; padding-top: 18px; padding-bottom: 40px; }
+  .topline { font-size: 10px; letter-spacing: 1.3px; }
+  .brand-mark { width: 34px; height: 34px; }
+  .hero-content { padding-top: 55px; }
+  .intro { font-size: 18px; }
+  .section-wrap { width: min(100% - 28px, 900px); }
+  .welcome { padding-top: 40px; padding-bottom: 27px; }
+  .menu-card { padding: 18px 14px; }
+  .pdf-frame { height: 470px; }
+  .menu-actions .button { width: 100%; }
+  .assistance { padding-top: 48px; padding-bottom: 48px; }
+  .contact-card { gap: 10px; padding: 13px 10px; }
+  .contact-icon { flex-basis: 38px; width: 38px; height: 38px; }
+  .phone-number { font-size: 21px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
